@@ -1,4 +1,4 @@
-#  PHP-RSA
+#  phprsa
 
 php使用rsa算法  
 
@@ -49,12 +49,12 @@ if ($_POST){
 }
 
 $str = md5('123456');
-echo '原始数据：'.$str . '<br><br><br>';
+echo '原始数据：'.$str . "\n";
 
 //私钥加密
 $data = $rsa->privateKeyEncode($str);
 if (!empty($data)){
-    echo '私钥加密：'.$data . '<br><br><br>';
+    echo '私钥加密：'.$data . "\n";
 }else{
     echo '私钥加密失败 <br><br><br>';
 }
@@ -63,28 +63,24 @@ if (!empty($data)){
 //公钥解密
 $decode = $rsa->decodePrivateEncode($data);
 if (!empty($decode)){
-    echo '公钥解密：'.$decode . '<br><br><br>';
+    echo '公钥解密：'.$decode . "\n";
 }else{
-    echo '公钥解密失败 <br><br><br>';
+    echo "公钥解密失败 \n";
 }
-
-//公钥加密
-$str = md5('654789');
-echo '原始数据：'.$str . '<br><br><br>';
 
 $pdata = $rsa->publicKeyEncode($str);
 if ($pdata){
-    echo '公钥加密：'.$pdata . '<br><br><br>';
+    echo '公钥加密：'.$pdata . "\n";
 }else{
-    echo '公钥加密失败';
+    echo "公钥加密失败 \n";
 }
 
 //私钥解密
 $pdecode = $rsa->decodePublicEncode($pdata);
 if ($pdecode){
-    echo '私钥解密：'.$pdecode . '<br><br><br>';
+    echo '私钥解密：'.$pdecode . "\n";
 }else{
-    echo '私钥解密失败 <br><br><br>';
+    echo "私钥解密失败 \n";
 }
 
 ```
