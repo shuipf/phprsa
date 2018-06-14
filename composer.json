@@ -1,7 +1,7 @@
 {
     "name": "shuipf/phprsa",
     "description": "这是一个PHP的RSA算法",
-    "license": "Apache License 2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "水平凡",
