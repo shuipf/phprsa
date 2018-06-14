@@ -8,7 +8,6 @@
             "email": "admin@abc3210.com"
         }
     ],
-    "minimum-stability": "dev",
     "support": {
         "issues": "https://github.com/shuipf/phprsa/issues"
     },
